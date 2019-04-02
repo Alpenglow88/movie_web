@@ -26,11 +26,18 @@
 	<header class="header_area">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item"><a href="#" class="primary_btn"></a></li>
-                    </ul>
 				</div>
+				 <div class="user-section">
+          <% if user_signed_in? %>
+            <a href="<%= user_path(current_user)%>">
+              <i class="fa fa-user"></i>
+            </a>
+        <% else %>
+          <a href="<%= new_user_session_path%>">
+            <i class="fa fa-sign-in"></i>
+          </a>
+        <% end %>
+        </div>
 			</nav>
 		</div>
 	</header>
@@ -57,11 +64,17 @@
 						</div>
                     <div class="container">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item"><a href="#" class="primary_btn">Log In</a></li>
+                        <li class="nav-item"><a href="film-list" class="primary_btn">Film List</a></li>
+                        <br>
+                    </ul>
+
+										<p class="centeredDescription col_4">Coming soon!</p>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item"><a href="sign-in" class="primary_btn">Log In</a></li>
                         <br>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item"><a href="#" class="primary_btn">Sign Up</a></li>
+                        <li class="nav-item"><a href="sign-up" class="primary_btn">Sign Up</a></li>
                     </ul>
 				</div>
         </div>
@@ -71,12 +84,6 @@
 		</div>
 	</section>
 	<!--================End Home Banner Area =================-->
-
-	<!--================Footer Area =================-->
-	<footer class="footer_area section_gap_top">
-		
-	</footer>
-	<!--================End Footer Area =================-->
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
