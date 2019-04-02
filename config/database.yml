@@ -48,3 +48,11 @@ test:
   database: movie_database_test
   pool: 5
   timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: movie_database_production
+  pool: 5
+  timeout: 5000
+  
