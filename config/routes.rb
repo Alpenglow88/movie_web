@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get 'log-in' => 'home#sign_in'
   get 'sign-up' => 'home#sign_up'
   get 'film-list' => 'home#film_list'
+
+  get 'under-construction' => 'home#under_construction'
 end
