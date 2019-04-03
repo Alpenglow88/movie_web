@@ -397,7 +397,7 @@ img {
 ============================================================================================ */
 .home_banner_area {
   z-index: 1;
-  background: url(../images/banner/home-banner.jpg) no-repeat center center;
+  background: url(../assets/banner/home-banner.jpg) no-repeat center center;
   background-size: cover; }
   .home_banner_area .banner_inner {
     width: 100%; }
@@ -440,7 +440,7 @@ img {
     min-height: 780px;
     z-index: 1; }
     .blog_banner .banner_inner .overlay, .blog_banner .banner_inner .single-gallery .content, .single-gallery .blog_banner .banner_inner .content {
-      background: url(../images/banner/banner-2.jpg) no-repeat scroll center center;
+      background: url(../assets/banner/banner-2.jpg) no-repeat scroll center center;
       opacity: .5;
       height: 125%;
       position: absolute;
@@ -474,7 +474,7 @@ img {
   position: relative;
   min-height: 430px;
   z-index: 1;
-  background: url(../images/banner/home-banner.jpg) no-repeat center center;
+  background: url(../assets/banner/home-banner.jpg) no-repeat center center;
   background-size: cover; }
   .banner_area .banner_inner {
     position: relative;
@@ -1258,7 +1258,7 @@ body.blog_page {
   position: relative; }
   .reservation_form_area .res_form_inner:before {
     content: "";
-    background: url(../images/contact-shap-1.png);
+    background: url(../assets/contact-shap-1.png);
     position: absolute;
     left: -125px;
     height: 421px;
@@ -1267,7 +1267,7 @@ body.blog_page {
     transform: translateY(-50%); }
   .reservation_form_area .res_form_inner:after {
     content: "";
-    background: url(../images/contact-shap-2.png);
+    background: url(../assets/contact-shap-2.png);
     position: absolute;
     right: -125px;
     height: 421px;
@@ -2332,7 +2332,7 @@ h6 {
   color: #222222; }
 
 .primary-checkbox input:checked + label {
-  background: url(../images/elements/primary-check.png) no-repeat center center/cover;
+  background: url(../assets/elements/primary-check.png) no-repeat center center/cover;
   border: none; }
 
 .confirm-checkbox {
@@ -2366,7 +2366,7 @@ h6 {
   border: 1px solid #f1f1f1; }
 
 .confirm-checkbox input:checked + label {
-  background: url(../images/elements/success-check.png) no-repeat center center/cover;
+  background: url(../assets/elements/success-check.png) no-repeat center center/cover;
   border: none; }
 
 .disabled-checkbox {
@@ -2404,7 +2404,7 @@ h6 {
   z-index: 3; }
 
 .disabled-checkbox input:checked + label {
-  background: url(../images/elements/disabled-check.png) no-repeat center center/cover;
+  background: url(../assets/elements/disabled-check.png) no-repeat center center/cover;
   border: none; }
 
 .primary-radio {
@@ -2438,7 +2438,7 @@ h6 {
   border: 1px solid #f1f1f1; }
 
 .primary-radio input:checked + label {
-  background: url(../images/elements/primary-radio.png) no-repeat center center/cover;
+  background: url(../assets/elements/primary-radio.png) no-repeat center center/cover;
   border: none; }
 
 .confirm-radio {
@@ -2472,7 +2472,7 @@ h6 {
   border: 1px solid #f1f1f1; }
 
 .confirm-radio input:checked + label {
-  background: url(../images/elements/success-radio.png) no-repeat center center/cover;
+  background: url(../assets/elements/success-radio.png) no-repeat center center/cover;
   border: none; }
 
 .disabled-radio {
@@ -2519,7 +2519,7 @@ h6 {
   padding: 0px; }
 
 .disabled-radio input:checked + label {
-  background: url(../images/elements/disabled-radio.png) no-repeat center center/cover;
+  background: url(../assets/elements/disabled-radio.png) no-repeat center center/cover;
   border: none; }
 
 .default-select {
@@ -2687,7 +2687,7 @@ h6 {
 /* Start Recent Update Area css
 ============================================================================================ */
 .recent_update_area {
-  background: url(../images/recent_up_bg.png) no-repeat center; }
+  background: url(../assets/recent_up_bg.png) no-repeat center; }
   .recent_update_area.made_white {
     background: #fff; }
 
@@ -2807,7 +2807,7 @@ h6 {
 ============================================================================================ */
 .testimonials_area {
   position: relative;
-  background: url(../images/testimonial_bg.png) no-repeat center;
+  background: url(../assets/testimonial_bg.png) no-repeat center;
   background-size: cover; }
 
 .testi_slider {
