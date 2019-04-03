@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get 'home' => 'home#index'
-  get 'sign-in' => 'home#sign_in'
+  get 'log-in' => 'home#sign_in'
   get 'sign-up' => 'home#sign_up'
   get 'film-list' => 'home#film_list'
 end
