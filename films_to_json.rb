@@ -73,6 +73,12 @@ films.each do |film|
   }
 
   File.write("./json_film_list/#{filmname}.json", JSON.pretty_generate(hash))
+  
+  File.open('./films.json', 'a') do |f|
+    f.puts JSON.pretty_generate(hash)
+  end
+
+
 end
 
 File.delete('./filelist.json') if File.exist?('./filelist.json')
