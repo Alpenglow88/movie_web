@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
-require 'csv'
 require 'rest-client'
 require 'json'
 require 'launchy'
-require 'find'
 
 require './constants.rb'
 
@@ -12,11 +10,11 @@ require './constants.rb'
 File.write('./filelist.json', Dir.entries('home movies/.').drop(2))
 list = File.read('filelist.json').tr('_', '-').gsub!('.mp4', '').gsub!('.', ' ')
 films = JSON.parse(list)
+last_film = films[films.length - 1].capitalize()
 
-# creates .csv with suitable columns
-# CSV.open('films.csv', 'wb') do |csv|
-#   csv << %w[Title Overview Poster Rating Trailer]
-# end
+File.open('./films.json', 'a') do |f|
+  f.puts '['
+end
 
 # iterates through file names in folder and queries The Movie Database
 films.each do |film|
@@ -47,20 +45,12 @@ films.each do |film|
 
     film_trailer_key = trailer_rb['results'][i]['key']
     break
+  rescue NoMethodError
+    film_trailer_key = '4YKpBYo61Cs'
   end
 
   film_trailer = "https://www.youtube.com/watch?v=\'#{film_trailer_key}\'".delete "'"
   # Launchy.open(film_trailer)
-
-  # CSV.open('films.csv', 'a+') do |csv|
-  #   csv << [
-  #     "\'#{filmname}\'",
-  #     "\'#{filmoverview}\'",
-  #     "\'#{image_url}\'",
-  #     "\'#{vote_average}\'",
-  #     "\'#{film_trailer}\'"
-  #   ]
-  # end
 
   hash = {
     film: {
@@ -74,11 +64,21 @@ films.each do |film|
 
   File.write("./json_film_list/#{filmname}.json", JSON.pretty_generate(hash))
   
-  File.open('./films.json', 'a') do |f|
-    f.puts JSON.pretty_generate(hash)
+  if filmname == last_film
+    File.open('./films.json', 'a') do |f|
+      f.puts JSON.pretty_generate(hash)
+    end
+
+  else
+    File.open('./films.json', 'a') do |f|
+      f.puts JSON.pretty_generate(hash)
+      f.puts ','
+    end
   end
+end
 
-
+File.open('./films.json', 'a') do |f|
+  f.puts ']'
 end
 
 File.delete('./filelist.json') if File.exist?('./filelist.json')
